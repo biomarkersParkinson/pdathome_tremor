@@ -100,8 +100,4 @@ Spec      = filterBank*S;
 
 CepsCoeff = cepstralCoefficients(Spec,'NumCoeffs',NumMelCoeff);
 
-Ceps = mean(CepsCoeff);
-
-CepsVariables = Ceps;
-
-TableOut  = array2table(CepsVariables,'VariableNames',VarName);
+TableOut  = array2table(CepsCoeff,'VariableNames',VarName);
