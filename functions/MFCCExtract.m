@@ -98,6 +98,8 @@ VarName = CepsName;
 
 Spec      = filterBank*S;
 
+CepsCoeff = cepstralCoefficients(Spec,'NumCoeffs',NumMelCoeff);
+
 Ceps = mean(CepsCoeff);
  
 CepsVariables = Ceps;

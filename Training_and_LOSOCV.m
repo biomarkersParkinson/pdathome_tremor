@@ -233,7 +233,7 @@ if  FlagExtractFeatures == 1
 
     %% Load data from non-PD controls
     load('...\video_annotations\labels_HC_phys.mat');
-    load('...\sensor data\phys_cur_HC_merged.mat');
+    load('...\sensor_data\phys_cur_HC_merged.mat');
     
     %% Loop over all non-PD controls
 
@@ -341,7 +341,7 @@ else % load previously extracted features
     load('EventsHC.mat')
 end
 
-%% Delete cycling windows of tremor patient hbv017, since presence of tremor is not clear on the video
+%% Delete cycling windows of tremor patient pd06, since presence of tremor is not clear on the video
 
 Cycling_idx = find(EventsTremor(3).ActvLabel==9);
 EventsTremor(3).PxxVectorGyro(Cycling_idx) = [];
